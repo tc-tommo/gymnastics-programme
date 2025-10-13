@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Workout Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto 40px auto;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .header {
+            /* text-align: center */
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header .subtitle {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .workout-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .workout-table th {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .workout-table th:first-child {
+            border-top-left-radius: 10px;
+        }
+
+        .workout-table th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        .workout-table td {
+            padding: 18px 15px;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .workout-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.3s ease;
+        }
+
+        .exercise-name {
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .quantity {
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .icon {
+            margin-right: 8px;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .workout-table th,
+            .workout-table td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Beginner</h1>
+        </div>
+        
+        <table class="workout-table">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dumbbell icon"></i>Exercise</th>
+                    <th><i class="fas fa-layer-group icon"></i>Sets</th>
+                    <th><i class="fas fa-redo icon"></i> / <i class="fas fa-clock icon"></i>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="exercise-name">Goblet Squats</td>
+                    <td class="sets-reps">4</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Tricep Dips</td>
+                    <td class="sets-reps">4</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Press Up</td>
+                    <td class="sets-reps">4</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Incline Pullup</td>
+                    <td class="sets-reps">4</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>15 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Single leg Hip Thrust</td>
+                    <td class="sets-reps">4</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>15 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Side Plank Hold</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-clock icon"></i>30 sec</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Intermediate</h1>
+            <!-- Intermediate	Back Squat	3	10
+	Dips	3	12
+	Overhead Press	3	10
+	Pull up	3	5
+	Wall supported SL RDL	3	10
+	Back & side extension hold	3	00:30 -->
+        </div>
+        
+        <table class="workout-table">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dumbbell icon"></i>Exercise</th>
+                    <th><i class="fas fa-layer-group icon"></i>Sets</th>
+                    <th><i class="fas fa-redo icon"></i> / <i class="fas fa-clock icon"></i>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="exercise-name">Back Squat</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Dips</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>12 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Overhead Press</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                
+                <tr>
+                    <td class="exercise-name">Pull up</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>5 reps</td>
+                </tr>
+                
+                <tr>
+                    <td class="exercise-name">Single leg deadlift (supported)</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+                </tr>
+                <tr>
+                    <td class="exercise-name">Back &amp; side extension hold</td>
+                    <td class="sets-reps">3</td>
+                    <td class="quantity"><i class="fas fa-clock icon"></i>30 sec</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container"> 
+        <div class="header">
+            <h1>Advanced</h1>
+            <!-- Advanced	Back Squat	3	5
+	Bench press	3	5
+	Dynamic OH Press	3	5
+	Pull up	3	6
+	Wall supported SL RDL	3	10
+	Weighted back & side extension	3	01:00 -->
+        </div>
+        
+        <table class="workout-table">  
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dumbbell icon"></i>Exercise</th>
+                    <th><i class="fas fa-layer-group icon"></i>Sets</th>
+                    <th><i class="fas fa-redo icon"></i> / <i class="fas fa-clock icon"></i>Amount</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Back Squat</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>5 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Single leg hip thrust (weighted)</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Bench press</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>5 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Dynamic OH Press</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>5 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Pull up</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>6 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Single leg deadlift (supported)</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>10 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Weighted back &amp; side extension</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-clock icon"></i>10 reps</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Tumbler</h1>
+        </div>
+        <table class="workout-table">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-dumbbell icon"></i>Exercise</th>
+                    <th><i class="fas fa-layer-group icon"></i>Sets</th>
+                    <th><i class="fas fa-redo icon"></i> / <i class="fas fa-clock icon"></i>Amount</th>
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Back Squat (Dynamic Effort)</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>3 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Medball Throws</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>5 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Inside Plank</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>8 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Hanging Crunch</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>8 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Landmine Rotations</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>8 reps</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td class="exercise-name">Fire Hydrants</td>
+                <td class="sets-reps">3</td>
+                <td class="quantity"><i class="fas fa-redo icon"></i>8 reps</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    
+    <div class="footer">
+        <p><i class="fas fa-heart icon"></i>made by tommo</p>
+    </div>
+</body>
+</html>
